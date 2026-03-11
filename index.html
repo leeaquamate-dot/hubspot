@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HubSpot Form Test</title>
+    <meta
+      name="description"
+      content="A simple GitHub Pages test page for an embedded HubSpot form."
+    />
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f6f2ea;
+        --panel: #fffdf8;
+        --text: #1f1a17;
+        --muted: #6f6257;
+        --line: #e2d7ca;
+        --accent: #c96e2d;
+        --shadow: 0 20px 60px rgba(58, 38, 20, 0.08);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: Georgia, "Times New Roman", serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at top, rgba(201, 110, 45, 0.14), transparent 32%),
+          linear-gradient(180deg, #fbf8f2 0%, var(--bg) 100%);
+      }
+
+      main {
+        width: min(960px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 64px 0;
+      }
+
+      .hero {
+        margin-bottom: 24px;
+      }
+
+      h1 {
+        margin: 0 0 12px;
+        font-size: clamp(2rem, 4vw, 3.4rem);
+        line-height: 1.05;
+        letter-spacing: -0.03em;
+      }
+
+      p {
+        margin: 0;
+        font-size: 1.05rem;
+        line-height: 1.7;
+        color: var(--muted);
+      }
+
+      .card {
+        margin-top: 28px;
+        padding: 28px;
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        background: var(--panel);
+        box-shadow: var(--shadow);
+      }
+
+      .meta {
+        margin-bottom: 18px;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 12px;
+        border-radius: 999px;
+        background: rgba(201, 110, 45, 0.09);
+        color: var(--accent);
+        font-size: 0.92rem;
+      }
+
+      .footnote {
+        margin-top: 18px;
+        font-size: 0.95rem;
+      }
+
+      @media (max-width: 640px) {
+        main {
+          padding: 32px 0 48px;
+        }
+
+        .card {
+          padding: 20px;
+          border-radius: 18px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="hero">
+        <div class="meta">HubSpot Embedded Form Test</div>
+        <h1>HubSpot 表单嵌入测试页</h1>
+        <p>
+          这个页面适合直接部署到 GitHub Pages，用来验证 HubSpot
+          嵌入式表单是否能正常加载、提交和追踪。
+        </p>
+      </section>
+
+      <section class="card" aria-label="HubSpot form container">
+        <script
+          src="https://js-na2.hsforms.net/forms/embed/245495189.js"
+          defer
+        ></script>
+        <div
+          class="hs-form-frame"
+          data-region="na2"
+          data-form-id="e74c07e3-4e43-4df7-9243-a949bee72648"
+          data-portal-id="245495189"
+        ></div>
+        <p class="footnote">
+          如果表单没有出现，先确认 GitHub Pages 已启用，并检查浏览器控制台里是否有
+          HubSpot 脚本加载错误。
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
